@@ -1,0 +1,14 @@
+﻿@{
+    ViewData["Title"] = "Administration - Home";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@model IEnumerable<SonOfCod.Models.Inventory>
+
+<h2>Current Inventory</h2>
+<ul>
+    @foreach (var inventoryItem in Model)
+    {
+        <li>@Html.DisplayFor(modelItem => inventoryItem.Name)</li>
+
+    }
+</ul>

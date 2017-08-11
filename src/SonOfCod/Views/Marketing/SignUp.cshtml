@@ -1,0 +1,35 @@
+﻿@{
+    ViewData["Title"] = "Administration - Home";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@model SonOfCod.Models.MailingList
+
+@if(User.Identity.IsAuthenticated)
+{
+    <p>@Html.ActionLink("View all Recipients", "Recipients", "Marketing")</p>
+}
+else
+{    
+    @using (Html.BeginForm())
+    {
+        @Html.LabelFor(model => model.FirstName)
+        @Html.EditorFor(model => model.FirstName)
+
+        @Html.LabelFor(model => model.LastName)
+        @Html.EditorFor(model => model.LastName)
+
+        @Html.LabelFor(model => model.Email)
+        @Html.EditorFor(model => model.Email)
+
+        @Html.LabelFor(model => model.Interests)
+        @Html.EditorFor(model => model.Interests)
+        <input type="submit" value="SignUp" />
+    }
+}
+
+
+
+<p>@Html.ActionLink("See hwat we have available", "ViewAll", "Marketing")</p>
+
+<p>@Html.ActionLink("Admin Portal", "Index", "Account")</p>

@@ -13,7 +13,15 @@ namespace SonOfCod.Models
 		{
 
 		}
-		protected override void OnModelCreating(ModelBuilder builder)
+        public ApplicationDbContext()
+        {
+
+        }
+        protected override void OnConfiguring(DbContextOptionsBuilder options)
+        {
+            options.UseSqlServer(@"Server=(localdb)\mssqllocaldb;Database=SonOfCod;integrated security=True");
+        }
+        protected override void OnModelCreating(ModelBuilder builder)
 		{
 			base.OnModelCreating(builder);
 		}

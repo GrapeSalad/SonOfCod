@@ -9,12 +9,13 @@ using Xunit;
 
 namespace SonOfCodTests.ControllerTests
 {
+    [Collection("SonOfCodTests")]
     public class MarketingControllerTest
     {
-        private ApplicationDbContext _db;
         [Fact]
         public void Get_ViewResult_Index_Test()
         {
+             
             //Arrange
             MarketingController controller = new MarketingController();
 

@@ -1,0 +1,34 @@
+﻿@{
+    ViewData["Title"] = "Administration - Home";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@model IEnumerable<SonOfCod.Models.MailingList>
+
+@if (User.Identity.IsAuthenticated)
+{
+    <p>Hello @User.Identity.Name!</p>
+    @if (Model.Any())
+    {
+        <h4>List of Current recipients email addresses:</h4>
+            <ul>
+                @foreach (var mailRecipient in Model)
+                {
+                    <li>@Html.DisplayFor(modelItem => mailRecipient.Email)</li>
+                }
+            </ul>
+    }
+    else
+    {
+        <p>No one has signed up yet!</p>
+
+    }
+}
+else
+{
+    <p>You must sign in as Administrator to view this page.</p>
+}
+
+<p>@Html.ActionLink("See hwat we have available", "ViewAll", "Marketing")</p>
+
+<p>@Html.ActionLink("Admin Portal", "Index", "Account")</p>
