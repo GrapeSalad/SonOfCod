@@ -19,12 +19,12 @@ namespace SonOfCod.Tests
             inventoryItem.Cost = 12.99M;
 
             //Act
-            var result = inventoryItem.Description;
+            var desc = inventoryItem.Description;
             var namez = inventoryItem.Name;
             var cawst = inventoryItem.Cost;
 
             //Assert
-            Assert.Equal("Dude this thing can break your finger. Watch out.", result);
+            Assert.Equal("Dude this thing can break your finger. Watch out.", desc);
             Assert.Equal("Mantis Shrimp", namez);
             Assert.Equal(12.99M, cawst);
         }
