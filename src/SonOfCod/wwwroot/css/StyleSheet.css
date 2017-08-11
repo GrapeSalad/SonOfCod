@@ -1,2 +1,45 @@
-﻿body {
+﻿html, body{
+    height: 100%;
+}
+body {
+    background: url("../img/beachBg.jpg") no-repeat;
+    background-size: cover;
+    margin: 0;
+}
+.content{
+    margin: 200px 0 0;
+    padding: 0;
+    background: url("../img/bannerBg.jpg") no-repeat;
+    height: 800px;
+    border: 1px solid rgba(0,0,0,0.82);
+    -webkit-box-shadow: -1px -2px 121px 31px rgba(0,0,0,0.82);
+    -moz-box-shadow: -1px -2px 121px 31px rgba(0,0,0,0.82);
+    box-shadow: -1px -2px 121px 31px rgba(0,0,0,0.82);
+    border-radius: 20px;
+}
+.renderBody {
+    float: right;
+    top: 500px;
+    right: 30px;
+    position: relative;
+    height:200px;
+    width:50%;
+    color: white;
+    background: rgba(73, 111, 121, 1);
+    padding-bottom: 15%;
+    overflow:hidden;
+    background-clip: content-box;
+    z-index: 5;
+}
+.renderBody:before {
+  content: "";
+  position: absolute;
+  top:200px;
+  left: 0;
+  background-color:rgba(73, 111, 121, 1);
+  padding-bottom: 50%;
+  width: 57.7%;
+  transform-origin: 0 0;
+  transform: rotate(-30deg) skewX(30deg);
+  z-index: -1;
 }
