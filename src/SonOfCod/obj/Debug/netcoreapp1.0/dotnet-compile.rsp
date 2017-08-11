@@ -205,6 +205,8 @@ D:\David\Documents\Visual Studio 2015\Projects\SonOfCod\src\SonOfCod\Program.cs
 D:\David\Documents\Visual Studio 2015\Projects\SonOfCod\src\SonOfCod\Startup.cs
 D:\David\Documents\Visual Studio 2015\Projects\SonOfCod\src\SonOfCod\Migrations\20170811153825_Initial.cs
 D:\David\Documents\Visual Studio 2015\Projects\SonOfCod\src\SonOfCod\Migrations\20170811153825_Initial.Designer.cs
+D:\David\Documents\Visual Studio 2015\Projects\SonOfCod\src\SonOfCod\Migrations\20170811162523_AddTwoTables.cs
+D:\David\Documents\Visual Studio 2015\Projects\SonOfCod\src\SonOfCod\Migrations\20170811162523_AddTwoTables.Designer.cs
 D:\David\Documents\Visual Studio 2015\Projects\SonOfCod\src\SonOfCod\Migrations\ApplicationDbContextModelSnapshot.cs
 D:\David\Documents\Visual Studio 2015\Projects\SonOfCod\src\SonOfCod\Models\ApplicationDbContext.cs
 D:\David\Documents\Visual Studio 2015\Projects\SonOfCod\src\SonOfCod\Models\ApplicationUser.cs
