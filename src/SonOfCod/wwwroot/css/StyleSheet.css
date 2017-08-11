@@ -7,7 +7,7 @@ body {
     margin: 0;
 }
 .content{
-    margin: 200px 0 0;
+    margin: 200px 20px 0;
     padding: 0;
     background: url("../img/bannerBg.jpg") no-repeat;
     height: 800px;
@@ -19,7 +19,7 @@ body {
 }
 .renderBody {
     float: right;
-    top: 500px;
+    top: 400px;
     right: 30px;
     position: relative;
     height:200px;
@@ -31,7 +31,7 @@ body {
     background-clip: content-box;
     z-index: 5;
 }
-.renderBody:before {
+.renderBody:after {
   content: "";
   position: absolute;
   top:200px;
@@ -42,4 +42,8 @@ body {
   transform-origin: 0 0;
   transform: rotate(-30deg) skewX(30deg);
   z-index: -1;
+}
+.index{
+    text-align:center;
+
 }
