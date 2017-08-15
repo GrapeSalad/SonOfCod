@@ -3,12 +3,39 @@
 <html>
 <head>
     <meta name="viewport" content="width=device-width" />
+    @*<link href="~/css/bootstrap.css" rel="stylesheet" type="text/css" />*@
     <link href="~/css/StyleSheet.css" rel="stylesheet" type="text/css" />
     <title>@ViewBag.Title</title>
 </head>
 <body>
-    <h1>Son of Cod</h1>
-    <div class="content">
+    <div class="navigation">
+        <div class="navLeft">
+            <ul>
+                <li>
+                    @Html.ActionLink("Home", "Index", "Marketing")
+                </li>
+            </ul>
+        </div>
+        <div class="navRight">
+            <ul>
+                <li>
+                    @Html.ActionLink("Inventory", "ViewAll", "Marketing")
+                </li>
+                <li>
+                    @Html.ActionLink("Newsletter", "Signup", "Marketing")
+                </li>
+                <li>
+                    @Html.ActionLink("Admin", "Index", "Account")
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="header">
+        <h1>Son of Cod</h1>
+        <script src="//d3js.org/d3.v3.min.js"></script>
+        <script src="~/js/swimming.js"></script> @*Credit to Mike Bostoks D3 pages: https://bl.ocks.org/mbostock/1136236 some modifications are done by me*@
+    </div>
+    <div class="contentDiv">
         <div class="renderBody">
             @RenderBody()
         </div>

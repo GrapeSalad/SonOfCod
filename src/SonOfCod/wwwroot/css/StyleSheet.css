@@ -5,8 +5,59 @@ body {
     background: url("../img/beachBg.jpg") no-repeat;
     background-size: cover;
     margin: 0;
+    max-height: 900px;
 }
-.content{
+.navigation{
+    float: left;
+    position: fixed;
+    clear: both;
+    top: 0;
+    left: 0;
+}
+.navLeft{
+    border: 1px solid #fff;
+    background: rgba(73, 111, 121, .8);
+    text-align: center;
+    width: 150px;
+}
+.navRight{
+    float: right;
+    position: fixed;
+    right: 0;
+    top: 0;
+    border: 1px solid #fff;
+    background: rgba(73, 111, 121, .8);
+    text-align: center;
+    width: 150px;
+}
+.navLeft:hover{
+    -webkit-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+-moz-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+}
+.navRight:hover{
+    -webkit-box-shadow: -10px 10px 5px 0px rgba(0,0,0,0.75);
+-moz-box-shadow: -10px 10px 5px 0px rgba(0,0,0,0.75);
+box-shadow: -10px 10px 5px 0px rgba(0,0,0,0.75);
+}
+.header {
+    border: 1px solid #000;
+    -webkit-box-shadow: -2px 7px 34px 1px rgba(0,0,0,0.75);
+    -moz-box-shadow: -2px 7px 34px 1px rgba(0,0,0,0.75);
+    box-shadow: -2px 7px 34px 1px rgba(0,0,0,0.75);
+    display:block;
+    float: right;
+    clear: both;
+    font-size: 24px;
+    padding: 30px 0 0;
+    text-align:center;
+    color: aliceblue;
+    position: fixed;
+    right: 80px;
+    height: 250px;
+    width: 450px;
+}
+.contentDiv{
     margin: 200px 20px 0;
     padding: 0;
     background: url("../img/bannerBg.jpg") no-repeat;
@@ -27,9 +78,15 @@ body {
     color: white;
     background: rgba(73, 111, 121, 1);
     padding-bottom: 15%;
+    border-radius: 10px 10px 0 0;
     overflow:hidden;
     background-clip: content-box;
     z-index: 5;
+    overflow: auto;
+    text-align: center;
+}
+li {
+    list-style: none;
 }
 .renderBody:after {
   content: "";
@@ -42,8 +99,36 @@ body {
   transform-origin: 0 0;
   transform: rotate(-30deg) skewX(30deg);
   z-index: -1;
+  border-radius: 0 0 0 5px;
 }
 .index{
     text-align:center;
 
+}
+.header {
+    background: rgba(73, 111, 121, .8);
+}
+
+ellipse {
+    fill: #172717;
+}
+
+path {
+    fill: none;
+    stroke: #172717;
+    stroke-linecap: round;
+}
+
+.mid {
+    stroke-width: 2px;
+}
+
+.tail {
+    stroke-width: 1px;
+}
+
+svg {
+    float: right;
+    position: fixed;
+    right: 80px;
 }
