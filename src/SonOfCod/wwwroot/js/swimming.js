@@ -28,6 +28,10 @@ var head = g.append("ellipse")
     .attr("rx", 8)
     .attr("ry", 2);
 
+var sideHead = g.append("ellipse")
+    .attr("rx", 1)
+    .attr("ry", 10);
+
 g.append("path")
     .datum(function(d) { return d.path.slice(0, 3); })
     .attr("class", "mid");
@@ -47,8 +51,8 @@ d3.timer(function() {
             x = path[0][0] += dx,
             y = path[0][1] += dy,
             speed = Math.sqrt(dx * dx + dy * dy),
-            count = speed * 5,
-            k1 = -1.5 - speed / 4.5;
+            count = speed / 1.2,
+            k1 = -1.3 - speed / 9;
 
         // Bounce off the walls.
         if (x < 0 || x > width) minnowZoom.vx *= -1;
@@ -58,7 +62,7 @@ d3.timer(function() {
         for (var j = 0; ++j < m;) {
             var vx = x - path[j][0],
                 vy = y - path[j][1],
-                k2 = Math.sin(((minnowZoom.count += count) + j * 3) / 300) / speed;
+                k2 = Math.sin(((minnowZoom.count += count) + j * 3) / 100) / speed;
             path[j][0] = (x += dx / speed * k1) - dy * k2;
             path[j][1] = (y += dy / speed * k1) + dx * k2;
             speed = Math.sqrt((dx = vx) * dx + (dy = vy) * dy);
@@ -66,11 +70,16 @@ d3.timer(function() {
     }
 
     head.attr("transform", headTransform);
+    sideHead.attr("transform", sideHeadTransform);
     tail.attr("d", tailPath);
 });
 
 function headTransform(d) {
     return "translate(" + d.path[0] + ")rotate(" + Math.atan2(d.vy, d.vx) * degrees + ")";
+}
+
+function sideHeadTransform(d) {
+    return "translate(" + d.path[0] + ")rotate(" + Math.atan2(d.vy, d.vx) / degrees + ")";
 }
 
 function tailPath(d) {
